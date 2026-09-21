@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Syne } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { Providers } from "@/components/providers";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -14,9 +15,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const syne = Syne({
-  variable: "--font-syne",
-  subsets: ["latin"],
+const geistPixel = localFont({
+  src: [
+    { path: "./fonts/GeistPixel-Square.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/GeistPixel-Square.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/GeistPixel-Square.woff2", weight: "700", style: "normal" },
+  ],
+  variable: "--font-geist-pixel",
+  display: "swap",
+  fallback: ["ui-monospace", "monospace"],
 });
 
 export const viewport: Viewport = {
@@ -63,7 +70,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${syne.variable} dark h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${geistPixel.variable} dark h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-full bg-bg font-sans text-ink antialiased">

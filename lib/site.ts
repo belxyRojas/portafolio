@@ -6,7 +6,7 @@ export const site = {
   linkedin:
     "https://www.linkedin.com/in/belxy-katheryn-rojas-beltran-26894ab8",
   resume: "/BelxyRojas.pdf",
-  resumeFileName: "BelxyRojas.pdf",
+  resumeFileName: "Belxy-Rojas-HV.pdf",
   location: {
     en: "Colombia · Remote · Clients",
     es: "Colombia · Remoto · Clientes",

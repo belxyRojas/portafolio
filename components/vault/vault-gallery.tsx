@@ -169,9 +169,6 @@ export function VaultGallery({ items }: VaultGalleryProps) {
               <span className="rounded-full border border-line bg-bg-elevated/70 px-3 py-1.5 font-mono text-[11px] text-muted">
                 {t.vault.studio}
               </span>
-              <span className="rounded-full border border-line bg-bg-elevated/70 px-3 py-1.5 font-mono text-[11px] text-muted">
-                {t.vault.hint}
-              </span>
             </div>
 
             <div className="mt-12">

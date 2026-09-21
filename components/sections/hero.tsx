@@ -32,7 +32,6 @@ function scrollHeroToLayer(index: number) {
 function LayerRail() {
   const { t } = useI18n();
   const railRef = useRef<HTMLDivElement>(null);
-  const skillsRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const hoveredRef = useRef<number | null>(null);
   const [progress, setProgress] = useState(0);
@@ -40,7 +39,6 @@ function LayerRail() {
 
   const activeIndex = Math.min(3, Math.floor(progress * 4));
   const shownIndex = hovered ?? activeIndex;
-  const shownLayer = systemLayers[shownIndex] ?? "frontend";
   hoveredRef.current = hovered;
 
   useEffect(() => {
@@ -61,10 +59,6 @@ function LayerRail() {
       const rail = railRef.current;
       if (rail) {
         rail.style.transform = `translate3d(${mx * 14}px, ${my * 10 - next * 36}px, 0)`;
-      }
-      const skills = skillsRef.current;
-      if (skills) {
-        skills.style.transform = `translate3d(${mx * -18}px, ${layer * 26 + my * -10}px, 0)`;
       }
       itemRefs.current.forEach((item, index) => {
         if (!item) return;
@@ -92,44 +86,26 @@ function LayerRail() {
           />
         </div>
 
-        <div className="relative">
-          <div
-            ref={skillsRef}
-            className="absolute right-full top-0 mr-6 w-28 text-right will-change-transform"
-          >
-            <ul className="space-y-1">
-              {layerSkills[shownLayer].map((skill) => (
-                <li
-                  key={`${shownLayer}-${skill}`}
-                  className="font-mono text-[10px] tracking-[0.08em] text-lime-text/90"
-                >
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <ul className="space-y-2 text-right" onMouseLeave={() => setHovered(null)}>
-            {systemLayers.map((layer, index) => (
-              <li key={layer}>
-                <button
-                  type="button"
-                  ref={(node) => {
-                    itemRefs.current[index] = node;
-                  }}
-                  onMouseEnter={() => setHovered(index)}
-                  onClick={() => scrollHeroToLayer(index)}
-                  className={cn(
-                    "block w-full cursor-pointer text-right font-mono text-[10px] uppercase tracking-[0.18em] transition-colors duration-300 will-change-transform",
-                    shownIndex === index ? "text-lime-text" : "text-muted/70 hover:text-ink",
-                  )}
-                >
-                  {t.hero.layers[layer]}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="space-y-2 text-right" onMouseLeave={() => setHovered(null)}>
+          {systemLayers.map((layer, index) => (
+            <li key={layer}>
+              <button
+                type="button"
+                ref={(node) => {
+                  itemRefs.current[index] = node;
+                }}
+                onMouseEnter={() => setHovered(index)}
+                onClick={() => scrollHeroToLayer(index)}
+                className={cn(
+                  "block w-full cursor-pointer text-right font-mono text-[10px] uppercase tracking-[0.18em] transition-colors duration-300 will-change-transform",
+                  shownIndex === index ? "text-lime-text" : "text-muted/70 hover:text-ink",
+                )}
+              >
+                {t.hero.layers[layer]}
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
     </aside>
   );

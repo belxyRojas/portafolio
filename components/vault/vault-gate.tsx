@@ -99,10 +99,6 @@ export function VaultGate() {
               <ArrowRight className="h-4 w-4" />
             </button>
           </form>
-
-          <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-            {t.vault.hint}
-          </p>
         </div>
       </main>
     </>
