@@ -140,7 +140,7 @@ export function VaultGallery({ items }: VaultGalleryProps) {
 
   return (
     <>
-      <VaultChrome locked={false} />
+      <VaultChrome />
       <div
         className="pointer-events-none fixed inset-x-0 top-16 z-50 h-px bg-line"
         aria-hidden

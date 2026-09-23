@@ -2,18 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Lock, Moon, Sun, Unlock } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { KnotMark } from "@/components/knot-mark";
-import { lockVault } from "@/app/vault/actions";
 import { useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
-type VaultChromeProps = {
-  locked: boolean;
-};
-
-export function VaultChrome({ locked }: VaultChromeProps) {
+export function VaultChrome() {
   const { t, locale, setLocale } = useI18n();
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -52,26 +47,6 @@ export function VaultChrome({ locked }: VaultChromeProps) {
               <Sun className="h-4 w-4" />
             )}
           </button>
-          {locked ? (
-            <span
-              className="inline-flex items-center gap-1.5 rounded-full border border-line p-2 font-mono text-[11px] uppercase tracking-wider text-muted sm:px-3 sm:py-1.5"
-              aria-label={t.vault.locked}
-            >
-              <Lock className="h-3 w-3" />
-              <span className="hidden sm:inline">{t.vault.locked}</span>
-            </span>
-          ) : (
-            <form action={lockVault}>
-              <button
-                type="submit"
-                className="inline-flex items-center gap-1.5 rounded-full border border-line p-2 font-mono text-[11px] uppercase tracking-wider text-muted hover:border-pop/50 hover:text-pop sm:px-3 sm:py-1.5"
-                aria-label={t.vault.lock}
-              >
-                <Unlock className="h-3 w-3" />
-                <span className="hidden sm:inline">{t.vault.lock}</span>
-              </button>
-            </form>
-          )}
         </div>
       </div>
     </header>

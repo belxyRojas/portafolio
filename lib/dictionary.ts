@@ -9,7 +9,7 @@ export const dictionary = {
       projects: "Projects",
       experience: "Experience",
       contact: "Contact",
-      vault: "Vault",
+      vault: "Archive",
       resume: "Resume",
     },
     hero: {
@@ -97,15 +97,15 @@ export const dictionary = {
     },
     projects: {
       kicker: "Projects",
-      title: "Selected work — live product and confidential systems.",
+      title: "Selected work — live product and client systems.",
       live: "Live",
       caseStudy: "Case study",
       featured: "Featured",
       vaultTeaser: {
-        kicker: "Private",
-        title: "Live client work, behind a key.",
-        body: "Product sites shipped with Off-the-Record for clients. Shared on request — not indexed, not listed here.",
-        cta: "Enter archive",
+        kicker: "Clients",
+        title: "Live client work.",
+        body: "Product sites shipped with Off-the-Record. Open any of them from the archive.",
+        cta: "View the work",
       },
       items: [
         {
@@ -263,21 +263,10 @@ export const dictionary = {
       knot: "The knot is the mark: frontend, backend, infrastructure, and security—intertwined.",
     },
     vault: {
-      kicker: "Vault",
-      locked: "Locked",
-      lock: "Lock",
-      gateTitle: "This room is locked",
-      gateBody:
-        "Live client sites I engineered with Off-the-Record. I share this room by invitation — ask me for the key.",
-      password: "Key",
-      unlock: "Unlock",
-      unlocking: "Unlocking…",
-      error: "That key doesn’t fit.",
-      show: "Show key",
-      hide: "Hide key",
+      kicker: "Archive",
       galleryTitle: "Selected live work",
       galleryBody:
-        "Ten live product sites. Interface, backend, and delivery — kept off the public homepage and shared only here.",
+        "Ten live product sites. Interface, backend, and delivery.",
       sites: "sites",
       visit: "Open site",
       index: "Index",
@@ -382,15 +371,15 @@ export const dictionary = {
     },
     projects: {
       kicker: "Proyectos",
-      title: "Trabajo seleccionado — producto en vivo y sistemas confidenciales.",
+      title: "Trabajo seleccionado — producto en vivo y sistemas de clientes.",
       live: "En vivo",
       caseStudy: "Case study",
       featured: "Destacado",
       vaultTeaser: {
-        kicker: "Privado",
-        title: "Trabajo en vivo, detrás de una clave.",
-        body: "Sitios de producto entregados con Off-the-Record para clientes. Se comparte bajo pedido: no está indexado ni listado aquí.",
-        cta: "Entrar al archivo",
+        kicker: "Clientes",
+        title: "Trabajo de clientes en vivo.",
+        body: "Sitios de producto entregados con Off-the-Record. Ábrelos desde el archivo.",
+        cta: "Ver el trabajo",
       },
       items: [
         {
@@ -549,20 +538,9 @@ export const dictionary = {
     },
     vault: {
       kicker: "Archivo",
-      locked: "Cerrado",
-      lock: "Cerrar",
-      gateTitle: "Esta sala está cerrada",
-      gateBody:
-        "Sitios en vivo que desarrollé con Off-the-Record. Esta sala se comparte por invitación: pídeme la clave.",
-      password: "Clave",
-      unlock: "Abrir",
-      unlocking: "Abriendo…",
-      error: "Esa clave no encaja.",
-      show: "Mostrar clave",
-      hide: "Ocultar clave",
       galleryTitle: "Trabajo en vivo seleccionado",
       galleryBody:
-        "Diez sitios de producto en vivo. Interfaz, backend y entrega — fuera de la home pública, solo aquí.",
+        "Diez sitios de producto en vivo. Interfaz, backend y entrega.",
       sites: "sitios",
       visit: "Abrir sitio",
       index: "Índice",

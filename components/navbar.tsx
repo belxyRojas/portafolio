@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Download, Lock, Menu, Moon, Sun, X } from "lucide-react";
+import { Download, Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import { KnotMark } from "@/components/knot-mark";
 import { useI18n } from "@/lib/i18n";
@@ -103,9 +103,8 @@ export function Navbar() {
               <Sun className="h-4 w-4" />
             )}
           </button>
-          <Link href="/vault" className="vault-nav-btn inline-flex items-center gap-1.5 rounded-full bg-lime p-2 text-sm font-semibold text-[#141714] transition duration-500 hover:brightness-110 sm:px-3 sm:py-1.5">
-            <Lock className="h-3.5 w-3.5" />
-            <span className="hidden sm:inline">{t.nav.vault}</span>
+          <Link href="/vault" className="vault-nav-btn inline-flex items-center rounded-full bg-lime px-3 py-1.5 text-sm font-semibold text-[#141714] transition duration-500 hover:brightness-110">
+            {t.nav.vault}
           </Link>
           <a
             href={site.resume}
@@ -144,7 +143,6 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               className="vault-nav-btn inline-flex w-fit items-center gap-2 rounded-full bg-lime px-3.5 py-2 text-sm font-semibold text-[#141714]"
             >
-              <Lock className="h-3.5 w-3.5" />
               {t.nav.vault}
             </Link>
             <a

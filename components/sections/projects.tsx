@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, Lock } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
@@ -97,7 +97,6 @@ export function Projects() {
               <div className="max-w-xl">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-lime/15 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-lime-text">
-                    <Lock className="h-3 w-3" />
                     {t.projects.vaultTeaser.kicker}
                   </span>
                 </div>
