@@ -30,7 +30,7 @@ export function VaultChrome() {
           <button
             type="button"
             onClick={() => setLocale(locale === "en" ? "es" : "en")}
-            className="rounded-full border border-line px-2 py-1 font-mono text-[11px] text-muted hover:text-lime-text sm:px-2.5"
+            className="cursor-pointer rounded-full border border-line px-2 py-1 font-mono text-[11px] text-muted hover:text-lime-text sm:px-2.5"
             aria-label="Toggle language"
           >
             {locale === "en" ? "ES" : "EN"}
@@ -38,7 +38,7 @@ export function VaultChrome() {
           <button
             type="button"
             onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-            className="rounded-full border border-line p-2 text-muted hover:text-lime-text"
+            className="cursor-pointer rounded-full border border-line p-2 text-muted hover:text-lime-text"
             aria-label="Toggle theme"
           >
             {mounted && resolvedTheme === "light" ? (
